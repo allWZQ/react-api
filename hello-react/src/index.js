@@ -3,60 +3,28 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-class LikeButton extends Component {
-  // 默认属性defaultProps
-  static defaultProps = {
-    likedText: "取消",
-    unlikedText: "点赞"
-  };
-  constructor() {
-    super();
-    this.state = { isLiked: false };
-  }
-  handleClickOnLikeButton() {
-    this.setState({
-      isLiked: !this.state.isLiked
-    });
-  }
-  render() {
-    return (
-      <button onClick={this.handleClickOnLikeButton.bind(this)}>
-        {this.state.isLiked ? this.props.likedText : this.props.unlikedText} 👍
-      </button>
-    );
-  }
-}
+const users = [
+  { username: "Jerry", age: 21, gender: "male" },
+  { username: "Tomy", age: 22, gender: "male" },
+  { username: "Lily", age: 19, gender: "female" },
+  { username: "Lucy", age: 20, gender: "female" }
+];
+
 class Index extends Component {
-  constructor() {
-    super();
-    this.state = {
-      likedText: "已赞",
-      unlikedText: "赞"
-    };
-  }
-
-  handleClickOnChange() {
-    this.setState({
-      likedText: "取消",
-      unlikedText: "点赞"
-    });
-  }
-
   render() {
-    return (
-      <div>
-        <LikeButton />
-        <LikeButton
-          likedText={this.state.likedText}
-          unlikedText={this.state.unlikedText}
-        />
+    const usersElements = []; //保存每个用户渲染以后jsx的数据
+    for (const user of users) {
+      usersElements.push(
+        //循环每一个用户 添加
         <div>
-          <button onClick={this.handleClickOnChange.bind(this)}>
-            修改 wordings
-          </button>
+          <div>姓名:{user.username}</div>,<div>年龄：{user.age}</div>,
+          <div>性别：{user.gender}</div>,
+          <hr />
         </div>
-      </div>
-    );
+      );
+    }
+
+    return <div>{usersElements}</div>;
   }
 }
 ReactDOM.render(<Index />, document.getElementById("root"));
