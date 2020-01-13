@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <button class='like-btn'>
+            <!-- 第一个button -->
+            <span class='like-text'>点赞</span>
+            <span>👍</span>
+        </button>
+    </div>
+</body>
+<script>
+    //string转dom方法
+    const createDOMFromString = (domString) => {
+        const div = document.createElement('div')
+        div.innerHTML = domString
+        return div
+    }
+    class LikeButton {
+        render() {
+            //将字符串传入createDOMFromString方法
+            this.el = createDOMFromString(`
+        <button class='like-button'>
+          <span class='like-text'>点赞</span>
+          <span>👍</span>
+        </button>
+      `)
+            this.el.addEventListener('click', () => console.log('click'), false)
+            return this.el
+        }
+    }
+    const wrapper = document.querySelector('.wrapper')
+
+    const likeButton1 = new LikeButton() //第二个
+    wrapper.appendChild(likeButton1.render())
+
+    const likeButton2 = new LikeButton() //第三个
+    wrapper.appendChild(likeButton2.render())
+</script>
+
+</html>

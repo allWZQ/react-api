@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class='wrapper'>
+        <button class='like-btn'>
+            <span class='like-text'>点赞</span>
+            <span>👍</span>
+        </button>
+    </div>
+</body>
+<script>
+    class LikeButton {
+        render() {
+            return `
+        <button id='like-btn'>
+          <span class='like-text'>赞</span>
+          <span>👍</span>
+        </button> 
+        ` //返回值是字符串 无法进行DOM操作
+        }
+
+    }
+    const wrapper = document.querySelector('.wrapper')
+    const likeButton1 = new LikeButton()
+    wrapper.innerHTML = likeButton1.render() //第一个实例
+
+    const likeButton2 = new LikeButton() //第二个实例
+    wrapper.innerHTML += likeButton2.render()
+
+    const createDOMFromString = (domString) => {
+        const div = document.createElement("div")
+        div.innerHTML = domString
+        return div
+    }
+</script>
+
+</html>
