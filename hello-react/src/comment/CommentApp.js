@@ -5,7 +5,7 @@ import CommentList from "../comment/CommentList";
 class CommentApp extends Component {
   constructor() {
     super();
-
+    //子组件传值给父组件,父组件将值暂存起来
     this.state = {
       comments: []
     };
