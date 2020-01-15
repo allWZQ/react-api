@@ -1,0 +1,113 @@
+/* 底部 */
+footer {
+    border: 1px solid red;
+    height: 280px;
+    width: 100%;
+    min-width: 960px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_logo {
+    margin-right: 20px;
+}
+
+.footer_wrap1>div:nth-child(2) {
+    border: 1px solid red;
+    margin-right: 61px;
+    width: 340px;
+    height: 93px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_wrap1>div:nth-child(3) {
+    border: 1px solid red;
+    margin-right: 61px;
+    width: 100px;
+    height: 109px;
+    position: relative;
+    top: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_wrap1>div:nth-child(4) {
+    border: 1px solid red;
+    margin-right: 81px;
+    width: 65px;
+    height: 105px;
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_wrap1>div:nth-child(5) {
+    border: 1px solid red;
+    width: 65px;
+    height: 79px;
+    position: relative;
+    top: -6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer>div:nth-child(1) {
+    margin-top: 30px;
+    border: 1px solid red;
+    width: 100%;
+    flex: 4 0 172px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>div:nth-child(2) {
+    margin-bottom: 25px;
+    border: 1px solid red;
+    border-top: 2px solid #e6e6e6;
+    width: 100%;
+    flex: 1 0 47px;
+}
+
+.footer_box {
+    display: flex;
+    flex-flow: column;
+
+}
+
+.footer_box h1 {
+    font-family: PingFang-SC-Bold;
+    font-size: 16px;
+    color: #393f4d;
+    font-weight: bold;
+}
+
+.footer_box h2 {
+    font-family: PingFang-SC-Bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #393f4d;
+    font-weight: bold;
+}
+
+a {
+    font-size: 16px;
+    color: #393f4d;
+}
+
+a:hover {
+    color: #f8b911;
+}
+
+.footer_wrap2 {
+    font-family: MicrosoftYaHei;
+    font-size: 14px;
+    color: #393f4d;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

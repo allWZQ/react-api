@@ -1,0 +1,165 @@
+/* 导航栏 */
+nav {
+    margin: 0 auto;
+    border: 1px solid red;
+    width: 960px;
+    height: 96px;
+    box-shadow: 1 0 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.zxlog {
+    margin-top: 25px;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    border: 1px solid red;
+}
+
+ul:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul:nth-child(2)>li {
+    width: 64px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+ul:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul:nth-child(3)>li {
+    border: 1px solid red;
+    width: 94px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 33px;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 94px;
+}
+
+/* 下拉框 */
+.drop_wrap {
+    border: 1px solid red;
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    width: 172px;
+    height: 139px;
+    background: url("../img/cut/首页/矩形674.png") no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    display: block;
+    z-index: 2;
+}
+
+.drop_wrap2 {
+    border: 1px solid red;
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    width: 172px;
+    height: 139px;
+    background: url("../img/cut/首页/矩形674拷贝.png") no-repeat;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    display: block;
+    z-index: 2;
+}
+
+.drop_wrap_n {
+    border: 1px solid red;
+    margin: 10px;
+    width: 154px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.drop_wrap_n span {
+    font-family: PingFang-SC-Regular;
+    font-size: 13px;
+}
+
+.drop_text3 {
+    border: 1px solid red;
+    width: 154px;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+.drop_text3 img:nth-child(1) {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+}
+
+.drop_text3 .copy3 {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    display: none;
+}
+
+.drop_text3 .text3 {
+    color: #8a8e9a;
+    position: absolute;
+    top: 12px;
+    left: 56px;
+}
+
+.drop_text3:hover .prototype {
+    display: none;
+}
+
+.drop_text3:hover .text3 {
+    color: orange;
+}
+
+.serve:hover .copy3 {
+    z-index: -2;
+}
+
+.drop_text3:hover .copy3 {
+    color: orange;
+    display: block;
+}
+
+.drop_text3:hover {
+    color: orange;
+}
+
+.serve:hover .drop_wrap {
+    display: flex;
+    display: block;
+}
+
+.serve:hover .drop_wrap2 {
+    display: flex;
+    display: block;
+}
